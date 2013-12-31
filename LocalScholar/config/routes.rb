@@ -1,5 +1,6 @@
 LocalScholar::Application.routes.draw do
   devise_for :users
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +15,7 @@ LocalScholar::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
+  #devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
 
   # Example resource route with options:
   #   resources :products do
